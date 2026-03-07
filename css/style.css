@@ -1,0 +1,361 @@
+:root {
+  --colorPrimario: #ec111a;
+  --colorSecundario: #082ba5;
+  --colorTerciario: #007bdf;
+  --colorSombras: #282d31;
+  --colorTitulos: #282d31;
+  --colorParrafos: #53575a;
+  --colorBordes: #dfe0e0;
+  --colorWhatsapp: #25d366;
+  --colorRadio: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*.row{
+  padding: 1.5em;
+  margin-bottom: 1em;
+  background-color: #e7f1fa;
+}*/
+
+.icono-whatsapp {
+  color: #fff;
+  background-color: var(--colorWhatsapp);
+  font-size: 3em;
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+  padding: 0.2em;
+  border-radius: 100%;
+  box-shadow: 4px 0px 8px var(--colorSombras);
+}
+
+/* INICIO DE MENU */
+header {
+  background-color: yellow;
+  position: fixed;
+  /* position fixed para que el menu de navegacion siempre este posicionado arriba */
+  /* para abajo como el wtsp left, rigth, top, o bottom, pero si no lo indico es arriba, pero dcomo buena practica se coloca el fixed */
+  top: 0;
+  /* ayuda a que se mantenga arriba */
+  width: 100%;
+  /* para que ocupe todo el ancho de la pantalla */
+  z-index: 1000;
+  /* z index para que el menu de navegacion oculte todos los elementos, para que este debajo de los elementos seria -1000
+  tambien conocido como capa, 1000 para que este encima y -1000 para que este detras*/
+  box-shadow: 0px 0px 6px var(--colorSombras);
+  padding: .5em;
+  /* el padding aqui indica la altura del menu */
+}
+
+.menu {
+  width: 85%;
+  /* para que no ocupe todo el ancho de la pantalla */
+  margin: auto;
+  /* para alinear los elementos en el centro, propiedad antigua, centre horizontalmente */
+  display: flex;
+  /* primero se pone el display flex como el activador para que las propieades de abajo funciones.
+  ---flex direction row es pordefecto pero lo forzamos para que los elementos que estan dentro de la clase 
+  menu (img y los enlaces esten posicionados en fila, uno al costado de otro.
+  ---space between para que la separacion entre los elemtnos sea equitativa
+  ---align items center , al medio de forma vertical*/
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins';
+}
+
+.img-logo{
+  height: 3em;
+  /* siempre modificar la altura pq el ancho lo deforma la imagen */
+  /* nota si quiero hacer mas grande el menu, entonces debo hacer crecer la imagen de alto o 
+  tambien en el header agrego el padding */
+}
+
+.btn-menu{
+  display: none;
+  /* para que el boton de hamburguesa menu no se muestre en pantallas grandes */
+}
+
+.enlaces{
+  text-align: right;
+  /* para alinear los enlaces a la derecha */
+}
+
+.enlaces a{
+  color: var(--colorParrafos);
+  text-decoration: none;
+  font-size: .9em;
+  padding: .7em;
+  font-weight: 500;
+}
+/* INICIO DE RWD , RESPONSIVE WEB DESIGN */
+/* sirva para como se va ver en celular */
+/* para movil coloco max-width: 1023px */
+/* para desktop coloco min-width: 1025px */
+/* la medida es relativa, significa que se ajusta según el tamaño de la pantalla */
+@media screen and (max-width: 1023px) {
+  /* haremos el menu verticalmente*/
+  .menu {
+    flex-direction: column;
+    /* para que los elementos se posicionen en columna, uno debajo del otro */
+    /* aqui ya no es necesario el display flex, pq ya lo activamos en la version de escritorio */
+  }
+  /* haremos que el boton de hamburguesa se muestre */
+  .btn-menu {
+    display: block;
+    /* para que el boton de hamburguesa se muestre*/
+  }
+  /* ahora para modificar el boton de hamburguesa */
+  .icono-menu{
+    color: var(--colorPrimario);
+    font-size: 2em;
+    /* el icono se comporta como un texto, por lo tanto se ponte font-size */
+  }
+  /* la clase logo esta conteniendo la imagen del logo y el boton de hamburguesa*/
+  /* usualmente la imagen se pone a la izquierda y el boton de hamburguesa  a la derecha o izquierda*/
+  .logo{
+    /* como es su primera vez usandolo activo del display*/
+    display: flex;
+    flex-direction: row;
+    /* row para que este en fila , uno al lado del otro */
+    justify-content: space-between;
+    /* espaciado entre ellos proporcional */
+    width: 100%;
+    /* ocupa todo el ancho */
+    margin-top: .4em;
+  }
+  /* ahora para modificar los enlaces, para que se muestren en columna y no en fila */
+  .enlaces{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }  
+}
+/* FIN DE RWD, RESPONSIVE WEB DESIGN */
+/* FIN DE MENU */
+
+.icono-whatsapp:hover {
+  background-color: #128c7e;
+}
+
+.titulo-2 {
+  font-family: "Poppins";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: -0.1em;
+}
+
+.titulo-1 {
+  font-family: "Poppins";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--colorPrimario);
+  margin-bottom: 1.2em;
+}
+
+.imagen {
+  margin-bottom: 1.2em;
+}
+
+.subtitulo-2 {
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: -0.1em;
+}
+
+.subtitulo-1 {
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--colorPrimario);
+  margin-bottom: 1.2em;
+}
+
+.parrafo {
+  text-align: justify;
+  font-size: 0.8em;
+  font-family: "Poppins";
+}
+
+.boton {
+  background-color: var(--colorPrimario);
+  color: #fff;
+  padding: 0.7em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 0.1em;
+  margin-left: 2.4em;
+}
+
+@media screen and (max-width: 1024px) {
+  .boton {
+    display: block;
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 0.8em;
+    text-align: center;
+  }
+}
+
+.boton:hover {
+  background-color: var(--colorSecundario);
+  color: #ffff00;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+
+/* INICIO DE CONTACTOS */
+.form {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 6px var(--colorSombras);
+  max-width: 800px;
+  margin: auto;
+}
+
+.contacto.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+label {
+  font-size: 0.8em;
+  font-family: "Poppins";
+  font-weight: 600;
+  color: var(--colorPrimario);
+}
+
+.input,
+.caja {
+  width: 100%;
+  border-radius: 0.3em;
+  border: 1px solid var(--colorPrimario);
+  padding: 0.3em;
+  font-size: 0.8em;
+  font-family: "Poppins";
+  margin-bottom: 0.7em;
+}
+
+.caja {
+  min-height: 200px;
+  max-height: 250px;
+}
+
+.botonContacto {
+  width: 100%;
+  border-radius: 0.2em;
+  border: none;
+  background-color: var(--colorPrimario);
+  color: #fff;
+  padding: 0.4em;
+  font-family: "Poppins";
+}
+
+.botonContacto:hover {
+  background-color: var(--colorSecundario);
+  color: #25d366;
+  transition: background-color 1s ease-in-out;
+}
+
+/* FIN DE CONTACTOS */
+
+/* INICIO DE CARDS O TARJETAS*/
+.titulo-cursos{
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.cards-grid{
+  display: grid;
+  /* display grid es el activador */
+  gap: 1.5em;
+  /* gap es el espacio entre cada tarjeta, tanto vertical como horizontal*/
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* autofill para que el relleno sea automatico, que se autoajuste de acuerdo al contenedor
+  250 px es el anchco de la tarjetas, todas las tarjetas ocupan 250px
+  1fr indica  que va haer una repeticio a la vez*/
+  /* 250 px masomenos ocupa 4 columnas, osea 4 tarjetas
+  350 px ocupa 3 columanas y asii, se puede adaptar */
+  padding: 1em;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: .5em;
+  box-shadow: 0 0 4px var(--colorSombras);
+}
+
+.card-img img{
+  border-radius: .5em .5em 0 0;
+}
+
+.card-content{
+  /* separacion interna del  titulo y  contenido */
+  gap: 1.5em;
+  padding: 1.5em .8em 0em; 
+  /* arriba , a los costados, abajo */
+}
+
+.card-content a{
+  text-decoration: none;
+}
+
+.card-title{
+  font-family: 'Poppins';
+  font-size: 1em;
+  color: var(--colorTitulos);
+  text-align: center;
+  font-weight: 600;
+}
+
+.card-info, .btn-otroscursos{
+  font-family: 'Poppins';
+  font-size: .8em;
+  background-color: #fff;
+  color: var(--colorPrimario);
+  border: 1.5px solid var(--colorPrimario);
+  padding: .5em;
+  margin: 1.2em;
+  border-radius: .5em;
+  text-align: center;
+  font-weight: 700;
+  /* para que ocupe todo al anccho pongo el display block */
+  display: block;
+}
+
+.btn-otroscursos{ 
+  padding: 1.2em;
+  margin: 1.2em auto;   /*esto lo centra */
+  width: 10%;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .btn-otroscursos{
+    width: 50%;
+  }
+}
+
+.card-info:hover, .btn-otroscursos:hover{
+  background-color: var(--colorSecundario);
+  color: #fff;
+  transition: background-color .3s ease-in-out;
+}
+/* FIN DE CARDS O TARJETAS*/
