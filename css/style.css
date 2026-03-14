@@ -32,6 +32,7 @@
   padding: 0.2em;
   border-radius: 100%;
   box-shadow: 4px 0px 8px var(--colorSombras);
+  z-index: 1000;
 }
 
 /* INICIO DE MENU */
@@ -48,7 +49,7 @@ header {
   /* z index para que el menu de navegacion oculte todos los elementos, para que este debajo de los elementos seria -1000
   tambien conocido como capa, 1000 para que este encima y -1000 para que este detras*/
   box-shadow: 0px 0px 6px var(--colorSombras);
-  padding: .5em;
+  padding: 0.5em;
   /* el padding aqui indica la altura del menu */
 }
 
@@ -66,31 +67,31 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
-.img-logo{
+.img-logo {
   height: 3em;
   /* siempre modificar la altura pq el ancho lo deforma la imagen */
   /* nota si quiero hacer mas grande el menu, entonces debo hacer crecer la imagen de alto o 
   tambien en el header agrego el padding */
 }
 
-.btn-menu{
+.btn-menu {
   display: none;
   /* para que el boton de hamburguesa menu no se muestre en pantallas grandes */
 }
 
-.enlaces{
+.enlaces {
   text-align: right;
   /* para alinear los enlaces a la derecha */
 }
 
-.enlaces a{
+.enlaces a {
   color: var(--colorParrafos);
   text-decoration: none;
-  font-size: .9em;
-  padding: .7em;
+  font-size: 0.9em;
+  padding: 0.7em;
   font-weight: 500;
 }
 /* INICIO DE RWD , RESPONSIVE WEB DESIGN */
@@ -111,14 +112,14 @@ header {
     /* para que el boton de hamburguesa se muestre*/
   }
   /* ahora para modificar el boton de hamburguesa */
-  .icono-menu{
+  .icono-menu {
     color: var(--colorPrimario);
     font-size: 2em;
     /* el icono se comporta como un texto, por lo tanto se ponte font-size */
   }
   /* la clase logo esta conteniendo la imagen del logo y el boton de hamburguesa*/
   /* usualmente la imagen se pone a la izquierda y el boton de hamburguesa  a la derecha o izquierda*/
-  .logo{
+  .logo {
     /* como es su primera vez usandolo activo del display*/
     display: flex;
     flex-direction: row;
@@ -127,14 +128,14 @@ header {
     /* espaciado entre ellos proporcional */
     width: 100%;
     /* ocupa todo el ancho */
-    margin-top: .4em;
+    margin-top: 0.4em;
   }
   /* ahora para modificar los enlaces, para que se muestren en columna y no en fila */
-  .enlaces{
+  .enlaces {
     display: flex;
     flex-direction: column;
     text-align: center;
-  }  
+  }
 }
 /* FIN DE RWD, RESPONSIVE WEB DESIGN */
 /* FIN DE MENU */
@@ -217,6 +218,90 @@ header {
   transition: background-color 1s ease-in-out;
 }
 
+/* INICIO DE FOOTER */
+.footer-p1 {
+  width: 100%;
+  background-color: var(--colorRadio);
+}
+.footer-contenedor {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.footer-caja {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3em;
+}
+.footer-icono {
+  font-size: 3em;
+  color: #fff;
+}
+.footer-datos h3,
+.footer-datos p {
+  font-family: "Poppins";
+  color: #fff;
+}
+.footer-datos h3 {
+  font-weight: 700;
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+}
+.footer-datos p {
+  font-weight: 600;
+  font-size: 0.8em;
+  margin-bottom: 0.2em;
+}
+
+.footer-p2 {
+  width: 100%;
+  background-color: #191919;
+}
+.footer-copyright {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+.footer-empresa,
+.footer-creditos {
+  font-family: "Poppins";
+  font-size: 0.8em;
+  color: #fff;
+  margin-bottom: 0;
+}
+.footer-autor {
+  color: var(--colorPrimario);
+}
+
+/* INICIO DE RESPONSIVE WEB DESIGN */
+@media screen and (max-width: 1023px) {
+  .footer-contenedor {
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+  }
+  .footer-copyright {
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+  }
+}
+/* FIN DE RESPONSIVE WEB DESIGN */
+/* FIN DE FOOTER */
+
 /* INICIO DE CONTACTOS */
 .form {
   background-color: #fff;
@@ -275,14 +360,14 @@ label {
 /* FIN DE CONTACTOS */
 
 /* INICIO DE CARDS O TARJETAS*/
-.titulo-cursos{
-  font-family: 'Poppins';
+.titulo-cursos {
+  font-family: "Poppins";
   font-weight: 700;
   font-size: 1.5em;
   text-align: center;
 }
 
-.cards-grid{
+.cards-grid {
   display: grid;
   /* display grid es el activador */
   gap: 1.5em;
@@ -296,66 +381,148 @@ label {
   padding: 1em;
 }
 
-.card{
+.card {
   background-color: #fff;
-  border-radius: .5em;
+  border-radius: 0.5em;
   box-shadow: 0 0 4px var(--colorSombras);
 }
 
-.card-img img{
-  border-radius: .5em .5em 0 0;
+.card-img img {
+  border-radius: 0.5em 0.5em 0 0;
 }
 
-.card-content{
+.card-content {
   /* separacion interna del  titulo y  contenido */
   gap: 1.5em;
-  padding: 1.5em .8em 0em; 
+  padding: 1.5em 0.8em 0em;
   /* arriba , a los costados, abajo */
 }
 
-.card-content a{
+.card-content a {
   text-decoration: none;
 }
 
-.card-title{
-  font-family: 'Poppins';
+.card-title {
+  font-family: "Poppins";
   font-size: 1em;
   color: var(--colorTitulos);
   text-align: center;
   font-weight: 600;
 }
 
-.card-info, .btn-otroscursos{
-  font-family: 'Poppins';
-  font-size: .8em;
+.card-info,
+.btn-otroscursos {
+  font-family: "Poppins";
+  font-size: 0.8em;
   background-color: #fff;
   color: var(--colorPrimario);
   border: 1.5px solid var(--colorPrimario);
-  padding: .5em;
+  padding: 0.5em;
   margin: 1.2em;
-  border-radius: .5em;
+  border-radius: 0.5em;
   text-align: center;
   font-weight: 700;
   /* para que ocupe todo al anccho pongo el display block */
   display: block;
 }
 
-.btn-otroscursos{ 
+.btn-otroscursos {
   padding: 1.2em;
-  margin: 1.2em auto;   /*esto lo centra */
+  margin: 1.2em auto; /*esto lo centra */
   width: 10%;
   text-decoration: none;
 }
 
 @media screen and (max-width: 1023px) {
-  .btn-otroscursos{
+  .btn-otroscursos {
     width: 50%;
   }
 }
 
-.card-info:hover, .btn-otroscursos:hover{
+.card-info:hover,
+.btn-otroscursos:hover {
   background-color: var(--colorSecundario);
   color: #fff;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 /* FIN DE CARDS O TARJETAS*/
+
+/* INICIO DE FORMULARIO DE REGISTRO */
+.form-registro {
+    box-shadow: 0 4px 8px var(--colorSombras);
+    border-radius: .5em;
+    padding: 1.5em;
+    max-width: 400px;
+    background-color: #FFF;
+    margin: 6em auto 2em auto;
+}
+
+.titulo-1-registro, .titulo-2-registro {
+    font-family: 'Urbanist';
+    font-weight: 600;
+}
+.titulo-1-registro {
+    color: var(--colorPrimario);
+    font-size: 1.2em;
+}
+.titulo-2-registro {
+    color: var(--colorParrafos);
+    font-size: 1em;
+}
+
+.caja-seleccion-registro select, .caja-registro input {
+    border: 1px solid var(--colorBordes);
+    border-radius: .5em;
+    padding: .6em .8em;
+    width: 100%;
+    margin: .5em 0;
+    outline: none;
+}
+.caja-seleccion-registro option, .caja-registro input::placeholder {
+    color: var(--colorParrafos);
+    font-weight: 600;
+}
+.caja-seleccion-registro select, .caja-registro input,
+.radio-btn-registro p, .radio-btn-registro label,
+.checkbox-registro label {
+    font-family: 'Urbanist';
+    color: var(--colorParrafos);
+    font-weight: 600;
+    font-size: .9em;
+}
+
+.radio-btn-registro p {
+    margin-bottom: .2em;
+}
+.radio-btn-registro label {
+    margin-right: 6em;
+}
+.radio-btn-registro input, .checkbox-registro input {
+    accent-color: var(--colorPrimario);
+}
+
+.checkbox-registro {
+    margin: .8em 0;
+}
+.checkbox-registro label {
+    font-size: .75em;
+}
+.checkbox-registro label a {
+    color: var(--colorPrimario);
+}
+
+.btn-registro input {
+    width: 100%;
+    background-color: var(--colorPrimario);
+    color: #FFF;
+    font-family: 'Urbanist';
+    border: none;
+    border-radius: .5em;
+    font-weight: 600;
+    padding: .7em 0;
+    transition: background-color 2s ease-in-out;
+}
+.btn-registro input:hover {
+    background-color: var(--colorSecundario);
+}
+/* FIN DE FORMULARIO DE REGISTRO */

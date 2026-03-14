@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <!-- FRAMEWORK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- LIBRERIA DE FUENTES  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- LIBRERIA DE ICONOS FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+
+    <!-- FAVICON : ICONO PARA LA PESTA;A DEL NAVEGADOR -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- HOJA DE ESTILOS CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- LIBRERIAS DE JS -->
+    <!-- las librerias de js deberian importarse justo debajo de la hoja de estilos -->
+    <script src="js/jquery.js"></script>
+    <!-- las demas librerias del javascript van abajo antes de terminar el body -->
+</head>
+
+<body>
+    <!-- BOTON DE WHATSAPP -->
+    <a href="https://wa.link/9ooltw" target="_blank">
+        <i class="fa-brands fa-whatsapp icono-whatsapp"></i>
+    </a>
+    <!-- FIN DE BOTON DE WHATSAPP -->
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header id="header">
+        <nav class="menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.svg" alt="" class="img-fluid img-logo">
+                </a>
+                <a href="#" class="btn-menu" id="btn-menu">
+                    <!-- BOTON DE HAMBURGUESA, es importado, la clase se llama icono-menu -->
+                    <i class="fa-solid fa-bars icono-menu"></i>
+                </a>
+            </div>
+            <div class="enlaces" id="enlaces">
+                <a href="index.html">INICIO</a>
+                <a href="cursos.html">CURSOS</a>
+                <a href="diplomados.html">DIPLOMADOS</a>
+                <a href="contacto.html">CONTACTOS</a>
+                <a href="registro.html">REGISTRO</a>
+                <a href="login.html">LOGIN</a>
+            </div>
+            <!-- aca son dos partes, el logo y los enlaces (como uno solo), si quisiera agregar otra parte,
+             tendria que agregar otro div -->
+        </nav>
+    </header>
+    <!-- FIN DE MENÚ DE NAVEGACIÓN -->
+
+    <!-- INICIO DE FORMULARIO DE REGISTRO -->
+    <article class="container form-padre-registro">
+        <section class="row">
+            <section class="col-12">
+                <form action="#" method="post" class="form-registro">
+                    <h1 class="titulo-1-registro">Regístrate aquí para más información</h1>
+                    <h2 class="titulo-2-registro">Te contactaremos a la brevedad.</h2>
+
+                    <div class="caja-seleccion-registro">
+                        <select required>
+                            <option value="" disabled selected>¿Qué producto te interesa?</option>
+                            <option value="carreras">Carreras</option>
+                            <option value="diplomados">Diplomados</option>
+                            <option value="cursos">Cursos</option>
+                        </select>
+                    </div>
+
+                    <div class="caja-seleccion-registro">
+                        <select required>
+                            <option value="" disabled selected>¿Qué carrera te gustaría estudiar?</option>
+                            <option value="administracion_negocios">Administración de Negocios</option>
+                            <option value="contabilidad">Contabilidad</option>
+                            <option value="mecatronica_industrial">Mecatrónica Industrial</option>
+                            <option value="negocios_internacionales">Negocios Internacionales</option>
+                            <option value="computacion_informatica">Computación e Informática</option>
+                            <option value="diseno_grafico">Diseño Gráfico</option>
+                            <option value="enfermeria_tecnica">Enfermería Técnica</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+
+                    <div class="caja-seleccion-registro">
+                        <select required>
+                            <option value="" disabled selected>Elige el campus</option>
+                            <option value="lima_sur">Lima Sur</option>
+                            <option value="lima_centro">Lima Centro</option>
+                            <option value="lima_norte">Lima Norte</option>
+                            <option value="surco">Surco</option>
+                            <option value="san_borja">San Borja</option>
+                            <option value="san_isidro">San Isidro</option>
+                        </select>
+                    </div>
+
+                    <div class="caja-registro">
+                        <input type="text" placeholder="Apellidos y Nombres" required>
+                    </div>
+                    <div class="caja-registro">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="caja-registro">
+                        <input type="tel" placeholder="Celular" maxlength="9" required>
+                    </div>
+
+
+                    <div class="radio-btn-registro">
+                        <p>¿Cómo nos comunicamos contigo?</p>
+
+                        <input type="radio" name="tipoContacto" id="tipoContactoWhatsapp" value="wsp" required>
+                        <label for="tipoContactoWhatsapp">WhatsApp</label>
+
+                        <input type="radio" name="tipoContacto" id="tipoContactoLlamada" value="llamada">
+                        <label for="tipoContactoLlamada">Llamada</label>
+                    </div>
+
+                    <div class="checkbox-registro">
+                        <input type="checkbox" id="terminos-condiciones" required>
+                        <label for="terminos-condiciones">
+                            Acepto las <a href="#">políticas de privacidad</a> y los
+                            <a href="#">términos y condiciones.</a>
+                        </label>
+                    </div>
+
+                    <div class="btn-registro">
+                        <input type="submit">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </article>
+    <!-- FIN DE FORMULARIO DE REGISTRO -->
+
+    <!-- INICIO DE FOOTER -->
+    <footer>
+        <div class="footer-p1">
+            <div class="footer-contenedor">
+                <div class="footer-caja">
+                    <i class="fa-solid fa-mobile-screen-button footer-icono"></i>
+                    <div class="footer-datos">
+                        <h3>Contacto</h3>
+                        <p>+51 939 123 987</p>
+                        <p>+51 939 123 987 (Whatsapp)</p>
+                    </div>
+                </div>
+
+                <div class="footer-caja">
+                    <i class="fa-solid fa-envelope footer-icono"></i>
+                    <div class="footer-datos">
+                        <h3>E-Mail</h3>
+                        <p>devlab.pe@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-caja">
+                    <i class="fa-solid fa-location-dot footer-icono"></i>
+                    <div class="footer-datos">
+                        <h3>Dirección</h3>
+                        <p>Lima - Perú</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-p2">
+            <div class="footer-copyright">
+                <p class="footer-empresa">
+                    DEVLAB SOLUCIONES INFORMÁTICAS SAC &copy;2026 - Todos los derechos reservados
+                </p>
+                <p class="footer-creditos">
+                    Desarrollado por <span class="footer-autor">Giancarlos Barboza N.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN DE FOOTER -->
+
+    <script src="js/headroom.min.js"></script>
+    <script src="js/menu-flex.js"></script>
+</body>
+
+</html>
